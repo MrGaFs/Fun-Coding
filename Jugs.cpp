@@ -34,9 +34,8 @@ int dy1[] = { 0, 0, -1, 1 };
 
 /******Functions*********/
     
-short path[1001][1001] , step[1001][1001][3];
-int x, y, num;
-int ans, ba, bb;
+int path[1001][1001] , step[1001][1001][3];
+int x, y, num, ans, ba, bb;
 void dfs(int a, int b, int dp, int cmd, int la, int lb) {
     if(path[a][b] <= dp)
         return ;
@@ -70,7 +69,6 @@ void rec(int a, int b) {
         case 4:cout << "pour A B\n";break;
         case 5:cout << "pour B A \n";break;
     }
-    //cout << endl ;
 }
   /******Main Function*********/
 int main() {
