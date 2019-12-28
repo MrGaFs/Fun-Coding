@@ -22,11 +22,11 @@ int dy1[] = { 0, 0, -1, 1 };
 
 	//classes
         void file (){
-      #ifndef ONLINE_JUDGE 
-        bool x = freopen ("in.txt", "r", stdin);
-        x = freopen ("out.txt", "w", stdout);
-      #else
-#endif
+      //#ifndef ONLINE_JUDGE 
+        //bool x = freopen ("in.txt", "r", stdin);
+        //x = freopen ("out.txt", "w", stdout);
+      //#else
+//#endif
   ios_base::sync_with_stdio (false);
   cout.tie (NULL);
   cin.tie (NULL);
@@ -34,7 +34,8 @@ int dy1[] = { 0, 0, -1, 1 };
 
 /******Functions*********/
     
-int path[1001][1001] , step[1001][1001][3];
+vector<vector<int>> path(1001,vector<int>(1001,oo)) ;
+int step[1001][1001][3];
 int x, y, num, ans, ba, bb;
 void dfs(int a, int b, int dp, int cmd, int la, int lb) {
     if(path[a][b] <= dp)
@@ -72,10 +73,15 @@ void rec(int a, int b) {
 }
   /******Main Function*********/
 int main() {
-      MrGAFs
-       cin >> x >> y >>num;
-        memset(path, 63, sizeof(path));
-        ans = 0xffff;
+      //MrGAFs
+          cout << "Enter the first Jug's volume: ";
+          cin >> x;
+            cout <<"\n Enter the second Jug's volume: ";
+                cin >>y ;
+            cout << "\n Enter the amount you want : ";
+            cin >> num;
+            cout << '\n';
+        ans = oo;
         dfs(0, 0, 0, -1, 0, 0);
         rec(ba, bb);
         cout << "success";
