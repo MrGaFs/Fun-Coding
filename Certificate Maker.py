@@ -21,8 +21,9 @@ for i in range(86):
     can = canvas.Canvas(packet, pagesize=letter)
     text = raw_input().decode('utf-8')
     #reportlab.rl_config.TTFSearchPath.append(str(settings.BASE_DIR))
-    pdfmetrics.registerFont(TTFont('fuck', '/home/mrgafs/.fonts/DTHULUTH-II-1.ttf'))
-    can.setFont("fuck", 55)
+    fontDir = '/home/mrgafs/.fonts/DTHULUTH-II-1.ttf'
+    pdfmetrics.registerFont(TTFont('font',fontDir))
+    can.setFont("font", 55)
     can.setFillColor(HexColor(0x862DAC))
     ar = arabic_reshaper.reshape(text)
     ar = get_display(ar)
@@ -32,8 +33,8 @@ for i in range(86):
     packet.seek(0)
     new_pdf = PdfFileReader(packet)
     # read your existing PDF
-    existing_pdf = PdfFileReader(open(
-        "/home/mrgafs/Desktop/Certificates/automate-the-boring-stuff-with-python-2015-.pdf", "rb"))
+           certDir= "/home/mrgafs/Desktop/Certificates/automate-the-boring-stuff-with-python-2015-.pdf"
+    existing_pdf = PdfFileReader(open(certDir , "rb"))
     output = PdfFileWriter()
     # add the "watermark" (which is the new pdf) on the existing page
     page = existing_pdf.getPage(0)
