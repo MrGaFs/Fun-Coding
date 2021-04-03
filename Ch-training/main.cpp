@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 #include "wild.h"
 #include "dome.h"
+#define KNRM  "\x1B[0m"
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KYEL  "\x1B[33m"
+#define KBLU  "\x1B[34m"
+#define KMAG  "\x1B[35m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
 using namespace std;
 vector<Dome> vDome;
 vector<Wild> vWild;
@@ -12,8 +20,9 @@ void add()
 	vector<string> actions;
 	int age, nActions;
 	//taking the input of the animal
-	printf("please enter the type of the animal\n1: Domestication Animal\n2: Wild Animal\n");
+	printf("%splease enter the type of the animal\n%s1: Domestication Animal\n2: Wild Animal\n",KGRN , KYEL);
 	cin >> type;
+	printf("%s", KGRN);
 	printf("\nPlease enter the name of the animal : ");
 	cin >> name;
 	printf("\nPlease enter the color of the animal : ");
@@ -139,8 +148,9 @@ int main()
 	int op;
 	while (1)
 	{
-		printf("Enter the number of the attribute\n1: add an animal\n2: list the animals\n3: change animal's data\n4: exit the program\n");
-		scanf("%d", &op);
+		printf("%sEnter the number of the attribute\n" , KBLU);
+		printf("%s1: add an animal\n2: list the animals\n3: change animal's data\n4: exit the program\n" , KMAG);
+		cin >> op ; 
 		switch (op)
 		{
 		case 1:
