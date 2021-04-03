@@ -4,6 +4,7 @@ using namespace std;
 #define ANIMAL_H
 class Animal
 {
+	//this is protected to be future broof
 protected:
 	string name, color;
 	int age;

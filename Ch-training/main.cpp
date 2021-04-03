@@ -94,7 +94,7 @@ void change()
 			break;
 		case 3:
 			printf("Enter the new age: ");
-			cin >> str;
+			cin >> n;
 			vDome[idx].setAge(n);
 			break;
 		case 4:
@@ -125,7 +125,7 @@ void change()
 			break;
 		case 3:
 			printf("Enter the new age: ");
-			cin >> str;
+			cin >> n;
 			vWild[idx].setAge(n);
 			break;
 		case 4:
