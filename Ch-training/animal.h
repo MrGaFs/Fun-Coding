@@ -71,8 +71,7 @@ public:
 		 << "age : "<<age << endl  
 		 << "actions : ";
 		for(int i = 0 ; i < actions.size() ; ++i)
-			cout << i+1 << actions[i] <<  endl ; 
-
+			cout << i + 1 << ' ' << actions[i] << endl;
 	}
 };
 

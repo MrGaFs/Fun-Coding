@@ -116,17 +116,17 @@ void change()
 		case 1:
 			printf("Enter the new name: ");
 			cin >> str;
-			vDome[idx].setName(str);
+			vWild[idx].setName(str);
 			break;
 		case 2:
 			printf("Enter the new color: ");
 			cin >> str;
-			vDome[idx].setColor(str);
+			vWild[idx].setColor(str);
 			break;
 		case 3:
 			printf("Enter the new age: ");
 			cin >> str;
-			vDome[idx].setAge(n);
+			vWild[idx].setAge(n);
 			break;
 		case 4:
 			printf("Enter the new actions quantitate: ");
@@ -137,7 +137,7 @@ void change()
 				printf("Enter the action number %d: ", i + 1);
 				cin >> tmp[i];
 			}
-			vDome[idx].setActions(tmp);
+			vWild[idx].setActions(tmp);
 
 			break;
 		}
